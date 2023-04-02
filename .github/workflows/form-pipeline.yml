@@ -9,7 +9,7 @@ jobs:
   FormTests:
     if: contains(github.event.issue.labels.*.name, 'Change')
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: read-all
     steps:
       - name: Run Issue form parser
         id: parse
