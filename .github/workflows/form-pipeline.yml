@@ -28,4 +28,3 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           comment: Close this action.
-          close-reason: scheduled
