@@ -24,5 +24,6 @@ jobs:
       - name: Close Issue
         uses: peter-evans/close-issue@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: 2
           comment: Auto-closing issue
