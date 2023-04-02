@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Run Issue form parser
         id: parse
-        uses: peter-murray/issue-forms-body-parser@v2.0.0
+        uses: peter-murray/issue-forms-body-parser@v3.0.0
         with:
           issue_id: ${{ github.event.issue.number }}
           separator: '###'
