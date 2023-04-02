@@ -7,7 +7,7 @@ on:
 
 jobs:
   FormTests:
-    if: github.event.issue.labels.*.name == 'Change'
+    if: contains(github.event.issue.labels.*.name, 'Change')
     runs-on: ubuntu-latest
     steps:
       - name: Run Issue form parser
