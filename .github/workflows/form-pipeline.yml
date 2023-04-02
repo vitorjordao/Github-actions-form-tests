@@ -22,8 +22,9 @@ jobs:
         run: |
           echo "${{ steps.parse.outputs.payload }}"
       - name: Close Issue
-        uses: peter-evans/close-issue@v2
+        uses: YiiGuxing/close-issue@v2.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: 2
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          issue-number: ${{ github.event.issue.number }}
           comment: Auto-closing issue
