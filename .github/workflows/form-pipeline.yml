@@ -28,3 +28,4 @@ jobs:
           repository: ${{ github.repository }}
           issue-number: ${{ github.event.issue.number }}
           comment: Auto-closing issue
+          close-reason: Closing
