@@ -21,7 +21,8 @@ jobs:
       - name: Show parsed data JSON
         run: |
           echo "${{ steps.parse.outputs.payload }}"
-      - uses: Logerfo/close-action@0.0.1
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
-          comment: true # If `true`, will comment on the closing issue(s).
+          issue-number: 2
+          comment: Auto-closing issue
